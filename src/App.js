@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
   return (
-    <div className="font-body h-screen bg-primary-white">
+    <div className="font-body bg-primary-white dark:bg-black">
       <Homescreen/>
     </div>
   );
