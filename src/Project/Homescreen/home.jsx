@@ -42,8 +42,8 @@ function Homescreen(params) {
                 </span>
               </p>
             </div>
-            <div class="relative text-gray-600 w-auto">
-              <span class="z-10 font-normal text-center absolute rounded text-base items-center justify-center pl-3 py-4">
+            <div className="relative text-gray-600 w-auto">
+              <span className="z-10 font-normal text-center absolute rounded text-base items-center justify-center pl-3 py-4">
                 <FeatherIcon
                   icon="search"
                   className="text-accent-gray"
@@ -54,14 +54,14 @@ function Homescreen(params) {
                 type="search"
                 name="serch"
                 placeholder="Destination"
-                class="bg-white h-14 w-full px-12 rounded-full text-sm focus:outline-none"
+                className="bg-white h-14 w-full px-12 rounded-full text-sm focus:outline-none"
               />
-              <span class="z-10 font-normal text-center absolute rounded text-base items-center justify-center right-0">
+              <span className="z-10 font-normal text-center absolute rounded text-base items-center justify-center right-0">
                 <button
                   type="button"
-                  class="rounded-full text-white px-6 py-3 items-center bg-primary  outline-none focus:ring-4 shadow-lg transform active:scale-x-75 transition-transform mx-2 mt-1 flex"
+                  className="rounded-full text-white px-6 py-3 items-center bg-primary  outline-none focus:ring-4 shadow-lg transform active:scale-x-75 transition-transform mx-2 mt-1 flex"
                 >
-                  <span class="mx-2">Let's go</span>
+                  <span className="mx-2">Let's go</span>
                   <FeatherIcon icon="arrow-right" size="18" />
                 </button>
               </span>

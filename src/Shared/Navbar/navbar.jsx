@@ -1,6 +1,6 @@
 import React from "react";
 import FeatherIcon from "feather-icons-react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Avatardropdown from "Shared/Dropdown/dropdown";
 import { Turn as Hamburger } from "hamburger-react";
 import { useState } from "react";
@@ -8,35 +8,39 @@ import Menubar from "Shared/Menubar/menubar";
 
 function Navcomponents() {
   return (
-    <div className="pt-1 hidden md:flex flex-row md:gap-x-12">
-      <Link
+    <div className="pt-1 hidden md:flex flex-row md:gap-x-12 text-accent-gray">
+      <NavLink
+        exact activeClassName="text-accent"
         to="/"
-        className="transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 flex flex-row gap-x-2 text-accent"
+        className="transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 flex flex-row gap-x-2"
       >
         <FeatherIcon icon="compass" />
         Discover
-      </Link>
-      <Link
+      </NavLink>
+      <NavLink
         to="/search"
-        className="transition duration-500 ease-in-out transform hover:-translate-y-1  hover:scale-110 flex flex-row gap-x-2 text-accent-gray"
+        activeClassName="text-accent"
+        className="transition duration-500 ease-in-out transform hover:-translate-y-1  hover:scale-110 flex flex-row gap-x-2"
       >
         <FeatherIcon icon="search" />
         Search
-      </Link>
-      <Link
+      </NavLink>
+      <NavLink
         to="/browse"
-        className="transition duration-500 ease-in-out transform hover:-translate-y-1  hover:scale-110 flex flex-row gap-x-2 text-accent-gray"
+        activeClassName="text-accent"
+        className="transition duration-500 ease-in-out transform hover:-translate-y-1  hover:scale-110 flex flex-row gap-x-2"
       >
         <FeatherIcon icon="navigation" />
         Explore
-      </Link>
-      <Link
+      </NavLink>
+      <NavLink
         to="/user/settings"
-        className="transition duration-500 ease-in-out transform hover:-translate-y-1  hover:scale-110 flex flex-row gap-x-2 text-accent-gray"
+        activeClassName="text-accent"
+        className="transition duration-500 ease-in-out transform hover:-translate-y-1  hover:scale-110 flex flex-row gap-x-2"
       >
         <FeatherIcon icon="settings" />
         Settings
-      </Link>
+      </NavLink>
     </div>
   );
 }

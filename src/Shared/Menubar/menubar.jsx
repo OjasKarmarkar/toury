@@ -1,6 +1,7 @@
 import React from "react";
 import FeatherIcon from "feather-icons-react";
 import { motion } from "framer-motion";
+import { NavLink } from "react-router-dom";
 
 function Menubar({ show }) {
   if (show) {
@@ -9,24 +10,40 @@ function Menubar({ show }) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.2 }}
-        className="md:hidden pt-8 flex flex-col gap-y-6 text-xl"
+        className="md:hidden pt-8 flex flex-col gap-y-6 text-xl text-accent-gray"
       >
-        <div className="flex flex-row gap-x-8 items-center  text-accent">
-          <FeatherIcon icon="compass" size="32" />
-          Discover
-        </div>
-        <div className="flex flex-row gap-x-8 items-center text-accent-gray">
-          <FeatherIcon icon="search" size="32" />
-          Search
-        </div>
-        <div className="flex flex-row gap-x-8 items-center text-accent-gray">
-          <FeatherIcon icon="navigation" size="32" />
-          Explore
-        </div>
-        <div className="flex flex-row gap-x-8 items-center text-accent-gray">
-          <FeatherIcon icon="settings" size="32" />
-          Settings
-        </div>
+         <NavLink
+        exact activeClassName="text-accent"
+        to="/"
+        className="transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 flex flex-row gap-x-8"
+      >
+        <FeatherIcon icon="compass" />
+        Discover
+      </NavLink>
+      <NavLink
+        to="/search"
+        activeClassName="text-accent"
+        className="transition duration-500 ease-in-out transform hover:-translate-y-1  hover:scale-105 flex flex-row gap-x-8"
+      >
+        <FeatherIcon icon="search" />
+        Search
+      </NavLink>
+      <NavLink
+        to="/browse"
+        activeClassName="text-accent"
+        className="transition duration-500 ease-in-out transform hover:-translate-y-1  hover:scale-105 flex flex-row gap-x-8"
+      >
+        <FeatherIcon icon="navigation" />
+        Explore
+      </NavLink>
+      <NavLink
+        to="/user/settings"
+        activeClassName="text-accent"
+        className="transition duration-500 ease-in-out transform hover:-translate-y-1  hover:scale-105 flex flex-row gap-x-8"
+      >
+        <FeatherIcon icon="settings" />
+        Settings
+      </NavLink>
       </motion.div>
     );
   } else {
