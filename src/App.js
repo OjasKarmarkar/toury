@@ -1,5 +1,4 @@
 import Homescreen from "Project/Homescreen/home";
-import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "Shared/Navbar/navbar";
 import { useState, useEffect } from "react";
@@ -11,17 +10,22 @@ function App() {
 
   return (
     <Router>
-      <Switch>
-        <div className="h-full px-10 md:px-20 font-body bg-primary-white">
+      <div className="font-body bg-primary-white">
+      <div className="h-full px-10 md:px-20">
           <div>
             <Navbar openCallback={hideContent} />
           </div>
-          <div className={menuHidden ? "opacity-0" : "opacity-100"}>
-            <Route path="/" exact component={Homescreen} />
+         
           </div>
-        </div>
-        <Route exact component={ErrorScreen} />
+      <Switch>
+      <Route path="/" exact>
+      <div className={"h-full px-10 md:px-20 " + (menuHidden ? "opacity-0" : "opacity-100")}>
+            <Homescreen/>
+            </div>
+      </Route>
+      <Route exact component={ErrorScreen}></Route>
       </Switch>
+      </div>
     </Router>
   );
 }
